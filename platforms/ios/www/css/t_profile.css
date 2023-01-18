@@ -1,0 +1,230 @@
+#t_main{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:white;
+    width:100%;
+    height:100%;
+}
+#t_header{
+    width:100%;
+    position: absolute;
+    height: 70px;
+    top:0%;
+    left: 0%;
+    text-shadow: 0px 0px 0px rgba(235,235,235,0.2);
+    background: rgba(235,235,235,0.2);
+
+}
+#t_profile_img_container{
+    position: absolute;
+    top:8px;
+    width:50px;
+    height: 50px;
+    left: 60px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+#t_profile_img{
+    position: absolute;
+    width:50px;
+    height: 50px;
+    top:0;
+    left: 0;
+}
+#t_profile_username{
+    color: rgb(22,23,27);
+    position: absolute;
+    left: 125px;
+    top:42px;
+    font-size: 12px;
+    text-shadow: 0px 0px rgba(255,255,255,0);
+    height:20px;
+    line-height: 20px;
+}
+#t_header_top_profile_id{
+    position: absolute;
+    width:auto;
+    color: rgb(22,23,27);
+    left: 120px;
+    font-size: 20px;
+    top: 8px;
+    text-shadow: 0px 0px 0px rgba(255,255,255,0);
+    height: 30px;
+    line-height: 30px;
+    font-weight: 600;
+}
+#t_profile_imgbtn{
+    position: absolute;
+    top:0;
+    left: 0;
+    width:60px;
+    height: 60px;
+}
+#t_postarea{
+    position: absolute;
+    top:70px;
+    left: 0;
+    overflow-y: scroll;
+    width:100%;
+    background: white;
+}
+#t_profile{
+    position: absolute;
+    width:100%;
+    top:0;
+    left: 0;
+    height: 50px;
+    background: white;
+    box-shadow: 0px -1px 10px rgba(120,120,120,0.5);
+}
+.t_profile_follow{
+    position: absolute;
+    width:25%;
+    height: 100%;
+    top: 0px;
+    text-align: center;
+    color: rgb(100,100,100);
+    font-weight: 400;
+    text-shadow: 0px 0px white;
+    line-height: 50px;
+    box-sizing: border-box;
+}
+#t_profile_follow1{
+    left: 0;
+    border-bottom:2px solid rgb(30,38,49);
+    color: rgb(32,38,49);
+}
+#t_profile_follow2{
+    left: 50%;
+
+}
+#t_profile_follow3{
+    left: 75%;
+}
+#t_profile_follow4{
+    left: 25%;
+}
+#t_info{
+    position: absolute;
+    top:50px;
+    left: 0;
+    width:100%;
+    overflow-y: scroll;
+    background: white;
+}
+#t_main2{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:white;
+    width:100%;
+    height:100%;
+}
+#t_header2{
+    width:100%;
+    position: absolute;
+    height: 70px;
+    top:0%;
+    left: 0%;
+    text-shadow: 0px 0px 0px rgba(235,235,235,0.2);
+    background: rgba(235,235,235,0.2);
+
+}
+#t_profile_img_container2{
+    position: absolute;
+    top:8px;
+    width:50px;
+    height: 50px;
+    left: 60px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+#t_profile_img2{
+    position: absolute;
+    width:50px;
+    height: 50px;
+    top:0;
+    left: 0;
+}
+#t_profile_username2{
+    color: rgb(22,23,27);
+    position: absolute;
+    left: 125px;
+    top:42px;
+    font-size: 12px;
+    text-shadow: 0px 0px rgba(255,255,255,0);
+    height:20px;
+    line-height: 20px;
+}
+#t_header_top_profile_id2{
+    position: absolute;
+    width:auto;
+    color: rgb(22,23,27);
+    left: 120px;
+    font-size: 20px;
+    top: 8px;
+    text-shadow: 0px 0px 0px rgba(255,255,255,0);
+    height: 30px;
+    line-height: 30px;
+    font-weight: 600;
+}
+#t_profile_imgbtn2{
+    position: absolute;
+    top:0;
+    left: 0;
+    width:60px;
+    height: 60px;
+}
+#t_postarea2{
+    position: absolute;
+    top:70px;
+    left: 0;
+    overflow-y: scroll;
+    width:100%;
+    background: white;
+}
+#t_profile2{
+    position: absolute;
+    width:100%;
+    top:0;
+    left: 0;
+    height: 50px;
+    background: white;
+    box-shadow: 0px -1px 10px rgba(120,120,120,0.5);
+}
+.t_profile_follow2{
+    position: absolute;
+    width:25%;
+    height: 100%;
+    top: 0px;
+    text-align: center;
+    color: rgb(100,100,100);
+    font-weight: 400;
+    text-shadow: 0px 0px white;
+    line-height: 50px;
+    box-sizing: border-box;
+}
+#t_profile_follow12{
+    left: 0;
+    border-bottom:2px solid rgb(30,38,49);
+    color: rgb(32,38,49);
+}
+#t_profile_follow22{
+    left: 50%;
+
+}
+#t_profile_follow32{
+    left: 75%;
+}
+#t_profile_follow42{
+    left: 25%;
+}
+#t_info2{
+    position: absolute;
+    top:50px;
+    left: 0;
+    width:100%;
+    overflow-y: scroll;
+    background: white;
+}

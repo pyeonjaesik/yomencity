@@ -1,0 +1,122 @@
+{
+  "cordova-plugin-camera": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-camera@4.0.3"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-contacts": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-contacts@3.0.1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-file": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-file@6.0.1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-file-transfer": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-file-transfer"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-geolocation": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-geolocation@4.0.1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-keyboard": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-keyboard"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-request-location-accuracy": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-request-location-accuracy"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova.plugins.diagnostic": {
+    "source": {
+      "type": "registry",
+      "id": "cordova.plugins.diagnostic@4.0.10"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-whitelist": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-whitelist@1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-cocoalumberjack": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-cocoalumberjack@~0.0.4"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "cordova-plugin-device": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-device"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "cordova-plugin-background-fetch": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-background-fetch@~5.4.1"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "cordova-plugin-firebase": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-firebase"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-inappbrowser": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-inappbrowser@3.0.0"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-splashscreen": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-splashscreen@5.0.2"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
+}

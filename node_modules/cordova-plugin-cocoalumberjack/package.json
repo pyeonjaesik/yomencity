@@ -1,0 +1,63 @@
+{
+  "_from": "cordova-plugin-cocoalumberjack@~0.0.4",
+  "_id": "cordova-plugin-cocoalumberjack@0.0.4",
+  "_inBundle": false,
+  "_integrity": "sha1-U/czZ6kkct7i0tsFxXXpY5IZkCs=",
+  "_location": "/cordova-plugin-cocoalumberjack",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "cordova-plugin-cocoalumberjack@~0.0.4",
+    "name": "cordova-plugin-cocoalumberjack",
+    "escapedName": "cordova-plugin-cocoalumberjack",
+    "rawSpec": "~0.0.4",
+    "saveSpec": null,
+    "fetchSpec": "~0.0.4"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-cocoalumberjack/-/cordova-plugin-cocoalumberjack-0.0.4.tgz",
+  "_shasum": "53f73367a92472dee2d2db05c575e9639219902b",
+  "_spec": "cordova-plugin-cocoalumberjack@~0.0.4",
+  "_where": "/yomencity/yomenclient/ios/yomen_i3",
+  "author": {
+    "name": "Chris Scott, Transistor Software"
+  },
+  "bugs": {
+    "url": "https://github.com/transistorsoft/cordova-plugin-cocoalumberjack/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-cocoalumberjack",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "deprecated": false,
+  "description": "Cordova wrapper for iOS CocoaLumberjack logging framework",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "homepage": "https://github.com/transistorsoft/cordova-cocoalumberjack#README",
+  "keywords": [
+    "logging",
+    "cordova",
+    "cocoa lumberjack",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "phonegap"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-cocoalumberjack",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/transistorsoft/cordova-plugin-cocoalumberjack.git"
+  },
+  "version": "0.0.4"
+}

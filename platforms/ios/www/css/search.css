@@ -1,0 +1,99 @@
+#searcharea{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+}
+#search_header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100px;
+}
+#search_space{
+    position: absolute;
+    width:100%;
+    height: 50px;
+    background: rgb(22,23,27);
+    top:0;
+}
+#search_header input[type=text]{
+    position: absolute;
+    padding: 12px 20px;
+    margin: 8px -20px; 
+/*    input 위치를 조정하고 싶으면 magin 값을 조정해 줄것!*/
+    box-sizing: border-box;
+    border-bottom: 2px solid rgba(200,200,200,0.28);
+    border-radius: 0%;
+    background: rgb(22,23,27);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    height: 30px;
+    top: 0px;
+    left: 0;
+    color: white;
+    text-shadow: 0px 0px rgb(22,23,27);
+}
+#search_header input[type=text]:focus{
+    border-bottom: 2px solid white;
+}
+#search_left{
+    position: absolute;
+    top:12px;
+    right: 10px;
+    width:25px;
+}
+#search_leftbtn{
+    position: absolute;
+    top:0;
+    right: 0;
+    width:50px;
+    height: 45px;
+}
+#search_main{
+    position: absolute;
+    top:100px;
+    left: 0;
+    width:100%;
+    background: rgba(250,250,250,0.6);
+    overflow-y: scroll;
+}
+#search_main2{
+    position: absolute;
+    top:100px;
+    left: 0;
+    width:100%;
+    background: rgba(250,250,250,0.6);
+    overflow-y: scroll;
+}
+#search_option{
+    position: absolute;
+    height: 50px;
+    top:50px;
+    left: 0;
+    width:100%;
+    background: white;
+    box-sizing: border-box;
+}
+.search_option_div{
+    position: absolute;
+    width:50%;
+    height: 48px;
+    top:0;
+    background: white;
+    color: rgb(30,38,49);
+    text-shadow: white;
+    font-size: 15px;
+    line-height: 50px;
+    text-align: center;
+    box-sizing: border-box;
+}
+#search_all{
+    left: 0;
+    border-bottom:2px solid rgb(30,38,49);
+}
+#search_near{
+    left: 50%;
+}

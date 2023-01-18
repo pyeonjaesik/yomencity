@@ -1,0 +1,33 @@
+#l_main{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:white;
+    width:100%;
+    height:100%;
+}
+#l_header{
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height: 60px;
+    box-shadow: 0px -1px 10px rgba(120,120,120,0.3);
+}
+#l_area{
+    position: absolute;
+    top:60px;
+    left: 0;
+    width:100%;
+    overflow-y: scroll;
+}
+#l_header_s{
+    position: absolute;
+    top:0px;
+    left: 60px;
+    line-height: 60px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(32,38,49);
+}

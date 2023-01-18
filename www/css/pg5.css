@@ -1,0 +1,453 @@
+#postarea5{
+    position: absolute;
+    top:70px;
+    left: 0;
+    overflow-y: scroll;
+    width:100%;
+    background: white;
+}
+#Pg5_main{
+    width:100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: white;
+}
+#Pg5_header{
+    width:100%;
+    position: absolute;
+    height: 70px;
+    top:0%;
+    left: 0%;
+    text-shadow: 0px 0px 0px rgba(235,235,235,0.2);
+    background: rgba(235,235,235,0.2);
+}
+#Pg5_ch_profile{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(200,200,200,0.7);
+}
+#Pg5_ch_profile_c{
+    position: absolute;
+    top: 60px;
+    left: 35px;
+    border-radius: 2px;
+}
+#Pg5_ch_profile_header{
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height: 50px;
+    background: white;
+}
+#Pg5_ch_profile_x{
+    position: absolute;
+    top:0px;
+    right:0px;
+    width:35px;
+}
+#Pg5_ch_profile_img_c{
+    position: absolute;
+    top:50px;
+    background: white;
+    overflow: hidden;
+}
+#Pg5_ch_profile_img{
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height: 100%;
+}
+#Pg5_ch_profile_footer{
+    position: absolute;
+    width:100%;
+    height: 50px;
+    background: white;
+}
+#Pg5_ch_profile_library{
+    position: absolute;
+    left: 0;
+    top:0;
+    width:70%;
+    height: 50px;
+    color: rgb(30,38,49);
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    text-shadow: 0px 0px 0px white;
+}
+#Pg5_ch_profile_library_s{
+    position: absolute;
+    left: 0;
+    top:0;
+    width:70%;
+    height: 50px;
+}
+#Pg5_ch_profile_finish{
+    position: absolute;
+    left: 70%;
+    width:30%;
+    top:0;
+    height: 50px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    text-shadow: 0px 0px 0px rgb(30,38,49);
+    background: rgb(30,38,49);
+}
+#Pg5_ch_profile_finish_s{
+    position: absolute;
+    left: 70%;
+    width:30%;
+    top:0;
+    height: 50px;    
+}
+#Pg5_profile_username{
+    color: rgb(30,38,49);
+    position: absolute;
+    left: 85px;
+    top:42px;
+    font-size: 12px;
+    text-shadow: 0px 0px white;
+}
+#pg5_header_top_profile{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+}
+#pg5_header_top_profile_id{
+    position: absolute;
+    width:auto;
+    height: auto;
+    color: rgb(30,38,49);
+    left: 80px;
+    font-size: 20px;
+    top: 8px;
+    text-shadow: 0px 0px 0px white;
+    font-weight: 600;
+}
+#Pg5_profile_write_btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width:50px;
+    height: 60px;
+}
+#Pg5_profile_setting_btn{
+    position: absolute;
+    top:0;
+    right:62px;
+    width:45px;
+    height: 60px;
+}
+#Pg5_profile{
+    position: absolute;
+    width:100%;
+    top:0;
+    left: 0;
+    height: 50px;
+    background: white;
+    box-shadow: 0px -1px 10px rgba(120,120,120,0.5);
+}
+#Pg5_profile_img_container{
+    position: absolute;
+    top:8px;
+    width:50px;
+    height: 50px;
+    left: 10px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+#Pg5_profile_img{
+    position: absolute;
+    width:50px;
+    height: 50px;
+    top:0;
+    left: 0;
+}
+#Pg5_profile_imgbtn{
+    position: absolute;
+    top:0;
+    left: 0;
+    width:60px;
+    height: 60px;
+}
+#Pg5_profile_img_container_btn_l{
+    position: absolute;
+    width:100%;
+    top:5px;
+}
+
+.Pg5_profile_follow{
+    position: absolute;
+    width:25%;
+    height: 100%;
+    top: 0px;
+    text-align: center;
+    color: rgb(100,100,100);
+    font-weight: 400;
+    text-shadow: 0px 0px white;
+    line-height: 50px;
+    box-sizing: border-box;
+}
+#Pg5_profile_follow1{
+    left: 0;
+    border-bottom:2px solid rgb(30,38,49);
+    color: rgb(32,38,49);
+}
+#Pg5_profile_follow2{
+    left: 50%;
+
+}
+#Pg5_profile_follow3{
+    left: 75%;
+}
+#Pg5_profile_follow4{
+    left: 25%;
+}
+
+/* 파랑 --> rgba(0,128,255,1);*/
+#Pg5_profile_write{
+    position: fixed;
+    width:35px;
+    right:10px;
+    top:9px;
+}
+#Pg5_profile_setting{
+    position: fixed;
+    width:45px;
+    height:45px;
+    right: 60px;
+    top:4px;
+}
+#Pg5_info{
+    position: absolute;
+    top:50px;
+    left: 0;
+    width:100%;
+    overflow-y: scroll;
+    background: white
+}
+#Pg5_setting{
+    width:100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    background: white;
+    position: absolute;
+}
+#Pg5_setting_x{
+    position: fixed;
+    top:3px;
+    left:2px;
+    width:45px;
+    height: 45px;
+}
+#Pg5_setting_xbtn{
+    position: fixed;
+    top:0px;
+    left:0px;
+    width:50px;
+    height:50px;
+}
+#Pg5_setting_main{
+    position: absolute;
+    left: 0;
+    top:60px;
+    width:100%;
+    background: white;
+    overflow-y: scroll;
+}
+#Pg5_post{
+    width:100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    position: absolute;
+}
+#Pg5_post2{
+    width:100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    position: absolute;
+}
+.Pg5_post_leftbtn_c{
+    position: absolute;
+    width: 35px;
+    top: 5px;
+    left: 5px;            
+}
+.Pg5_post_subject_c{
+    text-align: center;
+    font-size: 20px;
+    color: rgb(30,38,49);
+    position: absolute;
+    top: 0px;
+    width:100%;
+    height: 64px;
+    font-weight: 500;
+    background:white;
+    line-height: 50px;
+    text-shadow: 0px 0px white;
+}
+#Pg5_post_img{
+    position: absolute;
+    width:50%;
+    top: 125px;
+    left: 25%;
+    box-shadow: 0px 3px 3px gray;
+}
+.Pg5_post_next_btn_c{
+    position: fixed;
+    top:10px;
+    right: 10px;
+    width:60px;
+    height: 40px;
+    background:rgb(22,23,27);
+    border-radius: 1.5px;
+    line-height: 40px;
+    text-align: center;
+    color:white;
+    text-shadow: 0px 0px 0px rgba(255,255,255,0);
+    font-size: 17px;
+}
+#Pg5_post_img_c{
+    position: absolute;
+    left: 0;
+    top:60px;
+    width:100%;
+    background: white;
+    overflow-y: scroll;
+}
+#Pg5_post_img_ul{
+    background: white;
+}
+.Pg5_post_img_li{
+    position: relative;
+    width:100%;
+    top:0;
+    left: 0;
+    box-sizing: border-box;
+    background: white;
+}
+.Pg5_post_img_div{
+    position: absolute;
+    top:11px;
+    left: 11px;
+    border:1px solid rgba(180,180,180,0.8);
+    width:100%;
+    height: 100%;
+    box-sizing: border-box;
+    background: white;
+    color: rgb(30,38,49);
+    font-size: 12px;
+    text-align: center;
+    text-shadow: 0px 0px 0px white;
+    padding-top: 70%;
+}
+.Pg5_post_img_i{
+    position: absolute;
+    width:60px;
+}
+#Pg5_post2_subject{
+    left: 0;
+    position: fixed;
+}
+#Pg5_post2_leftbtn{
+    position: fixed;
+}
+#Pg5_post2_next{
+    position: fixed;
+}
+#Pg5_post2_textarea{
+    position: fixed;
+    left: 0px;
+    top:60px;
+    border-radius: 0%;
+    background: white !important;
+    border: 1px solid white;
+    padding-right: 13px;
+    padding-left: 13px;
+    min-height: 100px !important;
+    overflow:auto !important;
+    max-height: 100px !important;
+    outline-color: black;
+}
+#Pg5_sp1{
+    position: fixed;
+    top:60px;
+    left: 0;
+    width:100%;
+    height: 15px;
+    background: white;
+}
+#Pg5_sp2{
+    position: fixed;
+    top:164px;
+    left: 0;
+    width:100%;
+    height: 15px;
+    background: white;
+}
+#Pg5_sp3{
+    position: fixed;
+    top:0;
+    left: 0;
+    width:10px;
+    height: 180px;
+    background: white;
+}
+#Pg5_sp4{
+    position: fixed;
+    top:0;
+    right: 0;
+    width:10px;
+    height: 180px;
+    background: white;
+}
+#Pg5_count{
+    position: fixed;
+    top:200px;
+    left:0;
+    width:0;
+    height:3px;
+    background:rgb(22,23,27);
+}
+#Pg5_left{
+    position: fixed;
+    left:0;
+    top:170px;
+    height:30px;
+    width:75px;
+    line-height: 30px;
+    color:rgb(22,23,27,0.9);
+    font-size:14px;
+    font-weight: 700;
+    text-align: center;
+}
+.Pg5_setting_m{
+    position: relative;
+    width:100%;
+    height:60px;
+    font-size: 15px;
+    color: rgb(22,23,27);
+    font-weight: 700;
+    line-height: 60px;
+    text-align: center;
+    border-bottom: 1px solid rgba(100,100,100,0.2);
+    text-shadow: 0px 0px 0px rgba(255,255,255,0);
+}

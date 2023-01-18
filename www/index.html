@@ -1,0 +1,1599 @@
+<!--singup 할 때 값이 정수가 제대로 넘어가는지 문자가 넘어가는지 서버단에서도 고려해줄 것!-->
+<!--a_login 에서 p_check2() 고려해줄것!-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <link rel="stylesheet" href="js/jquery/jquery.mobile-1.4.5.min.css"/>
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+    <link href="css/pinchzoomer.min.css" rel="stylesheet">
+    <script src="js/hammer.min.js" type="text/javascript"></script>
+    <script src="js/TweenMax.min.js" type="text/javascript"></script>
+    <script src="js/jquery.pinchzoomer.min.js" type="text/javascript"></script>
+    <style>
+      .controlHolder
+      {
+        display: none
+      }
+    </style>	        
+    <link rel="stylesheet" href="./css/ui.css">
+    <link rel="stylesheet" href="./css/search.css">
+    <link rel="stylesheet" href="./css/chat.css">
+    <link rel="stylesheet" href="./css/pg5.css">
+    <link rel="stylesheet" href="./css/pg4.css">
+    <link rel="stylesheet" href="./css/t_profile.css">
+    <link rel="stylesheet" href="./css/love.css">
+    <link rel="stylesheet" href="./css/ui_c.css">
+    <link rel="stylesheet" href="./css/ui_s.css">
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=iTbPJ29hHxEfpMCC92TJ&submodules=geocoder"></script>
+    <script src="https://rawgit.com/leizongmin/js-xss/master/dist/xss.js"></script>
+    <script src="js/query.js"></script>  
+    <script src="js/ui.js"></script>
+    <script src="js/ui_search.js"></script>
+    <script src="js/ui_post5.js"></script>
+    <script src="js/addpost.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/a_login.js"></script>
+    <script src="js/cert.js"></script>
+    <script src="js/post3.js"></script>
+    <script src="js/mypost.js"></script>
+    <script src="js/photolibrary.js"></script>
+    <script src="js/imgdata_arr.js"></script>
+    <script src="js/post_scroll.js"></script>
+    <script src="js/info_scroll.js"></script>
+    <script src="js/post1.js"></script>
+    <script src="js/addmypost.js"></script>
+    <script src="js/addlpost.js"></script>
+    <script src="js/addreply.js"></script>
+    <script src="js/addreply_s.js"></script>
+    <script src="js/reply.js"></script>
+    <script src="js/reply_s.js"></script>   
+    <script src="js/reply_p_ui.js"></script>
+    <script src="js/reply_s_ui.js"></script>
+    <script src="js/reply_sp.js"></script>
+    <script src="js/post2.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="js/add_p.js"></script>
+    <script src="js/add_p_l.js"></script>
+    <script src="js/ch_profile.js"></script>
+    <script src="js/getp_img.js"></script>
+    <script src="js/ch_getpimg.js"></script>
+    <script src="js/post5.js"></script>
+    <script src="js/addinfo1.js"></script>
+    <script src="js/addinfo2.js"></script>
+    <script src="js/addinfo3.js"></script>
+    <script src="js/add_fg.js"></script>
+    <script src="js/add_fd.js"></script>
+    <script src="js/ui_setting.js"></script>
+    <script src="js/t_addinfo1.js"></script>
+    <script src="js/t_addinfo2.js"></script>
+    <script src="js/t_addinfo3.js"></script>
+    <script src="js/t_post.js"></script>
+    <script src="js/t_add_fd.js"></script>
+    <script src="js/t_add_fg.js"></script>
+    <script src="js/t_info_scroll.js"></script>
+    <script src="js/e_g_p.js"></script>
+    <script src="js/e_g_p2.js"></script>
+    <script src="js/r_p_g.js"></script>
+    <script src="js/r_s_g.js"></script>
+    <script src="js/recycle.js"></script>
+    <script src="js/l_g.js"></script>
+    <script src="js/l_scroll.js"></script>
+    <script src="js/push.js"></script>
+    <script src="js/ui_start.js"></script>
+    <script src="js/add_push.js"></script>
+    <script src="js/rp_btn.js"></script>
+    <script src="js/rs_btn.js"></script>
+    <script src="js/pg4.js"></script>
+    <script src="js/addp4.js"></script>
+    <script src="js/a_scroll.js"></script>
+    <script src="js/hl.js"></script>
+    <script src="js/add_h.js"></script>
+    <script src="js/t_add_h.js"></script>
+    <script src="js/ui_chat.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/add_c.js"></script>
+    <script src="js/add_cr.js"></script>
+    <script src="js/c_g.js"></script>
+    <script src="js/sendm.js"></script>
+    <script src="js/chat_scroll.js"></script>
+    <script src="js/c_btn.js"></script>
+    <script src="js/search_sp.js"></script>
+    <script src="js/s_g.js"></script>
+    <script src="js/ui_fgs.js"></script>
+    <script src="js/fgs_scroll.js"></script>
+    <script src="js/sc_g.js"></script>
+    <script src="js/sc_scroll.js"></script>
+    <script src="js/nopost.js"></script>
+    <script src="js/n_post.js"></script>
+    <script src="js/rmp.js"></script>
+    <script src="js/post3_scroll.js"></script>
+    <script src="js/t_fun.js"></script>
+    <script src="js/t_addinfo12.js"></script>
+    <script src="js/t_addinfo22.js"></script>
+    <script src="js/t_addinfo32.js"></script>
+    <script src="js/t_post2.js"></script>
+    <script src="js/t_add_fd2.js"></script>
+    <script src="js/t_add_fg2.js"></script>
+    <script src="js/t_info_scroll2.js"></script>
+    <script src="js/t_add_h2.js"></script>
+    <script src="js/rmr.js"></script>
+    <script src="js/chtk.js"></script>
+    <script src="js/toast.js"></script>
+    <script src="js/tip.js"></script>
+    <script src="js/visit.js"></script>
+    <script src="js/add_rc.js"></script>
+    <script src="js/phone.js"></script>
+    <script src="js/post6.js"></script>
+    <script src="js/Pg2_2_post.js"></script>
+    <script src="js/add_al.js"></script>
+    <script src="js/l_r_p_g.js"></script>
+    <script src="js/addreply_pl.js"></script>
+    <script src="js/l_r_s_g.js"></script>
+    <script src="js/addreply_sl.js"></script>
+    <script src="js/lh.js"></script>
+    <script src="js/post2_lh.js"></script>
+    <script src="js/p2_btn.js"></script>
+    <script src="js/p2al.js"></script>
+    <script src="js/post2_a.js"></script>
+    <script src="js/addp2a.js"></script>
+    <script src="js/ep2_g_p.js"></script>
+    <script src="js/add_lp.js"></script>
+    <script src="js/np_update.js"></script>
+    <script src="js/ch_start.js"></script>
+    <script src="js/ui_post.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <style>
+    div {
+        font-family: 'Nanum Gothic', sans-serif;
+    }
+    div,li,ul{
+      -webkit-overflow-scrolling: touch;    
+    }
+    div,span,li,img{
+        -webkit-touch-callout:none;
+        -webkit-touch-select:none;
+        -ms-user-select:none;
+        -moz-user-select:none;
+        -webkit-user-select:none;
+        -user-select:none;
+        -webkit-tap-highlight-color:rgba(0,0,0,0);
+    }        
+    </style>
+    <title>Yomencity</title>
+    <script>
+        var url='https://www.yomencity.xyz:8443';
+        var url2='http://www.yomencity.xyz:80';
+        var p_imgData='0';
+        var imgData=3;
+        var imgData2=3;
+        var imgData3=3;
+        var imgData4=3;
+        var imgData_arr=[];
+        var idal = 0;
+        var post_index = 0; 
+        var post_id =[];
+        var img_post_id;
+        var post_id_m =[];
+        var post3_scroll_h=0;
+        var post3_cont = 0;
+        var post1_index = 1;
+        var post2_index = 0;
+        var post5_index = 0;
+        var info_index =0;
+        var info_t_index = 0;
+        var post3_o_index =1;
+        var post3_s_index =0;
+        var post1_cont = 0;
+        var post2_cont = 0;
+        var post5_cont = 0;
+        var post_t_cont = 0;
+        var post1_id = [];
+        var p2lp=[];
+        var post2_id = [];
+        var post3_id = [];
+        var post51_id = [];
+        var post52_id = [];
+        var post_t1_id = [];
+        var post_t2_id = [];
+        var post_t1_id2 = [];
+        var post_t2_id2 = [];        
+        var post1_scroll_h=1000000;
+        var post2_scroll_h=1000000;
+        var p2_l=20;
+        var p2_r=20;        
+        var post5_scroll_h=210000;
+        var post52_scroll_h=200000;
+        var post_t_scroll_h=210000;
+        var post_t2_scroll_h=200000;
+        var post2_d = [];
+        var post2_t = [];
+        var p2_a=0;
+        var user_id_r;
+        var w_h = window.innerHeight;
+        var w_w = window.innerWidth;
+        var updated_lat =0;
+        var updated_long =0;
+        var lat = 0;
+        var long = 0;
+        var m_lat = 300;
+        var m_long = 300;
+        var sss1;
+        var ppp;
+        var tmp_sp ='';
+        var tmp_wp ='';
+        var ch_f =0;
+        var p1_ne1 = 0;
+        var p1_ne2 = 0;
+        var p1_ne3 = 0;
+        var p1_ne4 = 0;
+        var rn_p=0;
+        var rn_s=0;
+        var rn_tmp=0;
+        var rs_tmp=0;
+        var pid;
+        var pid2;
+        var h_index=0;
+        var t_h_index=0;
+        var h_arr=[];
+        var h_i1=0;
+        var h_i2=0;
+        var h_i3=0;
+        var h_i4=0;
+        var h_i5=0;
+        var h_i6=0;
+        var h_i7=0;
+        var h_i8=0;
+        var h_i9=0;
+        var h_i9=0;
+        var h_i11=0;
+        var h_i12=0;
+        var no_index=0;
+        var no_index2=0;
+        var lv_arr=[];
+        var luid=[];
+        var p_l_cont=0;
+        var p_l_cont_cp=1;
+        var post_l_scroll_h=200000;
+        var rp_id=[];
+        var rs_id=[];
+        var rp_cont_cp=1;
+        var rp_cont;
+        var rs_cont_cp=1;
+        var rs_cont;
+        var p_i=0;
+        var pushn=0;
+        var al_arr=[];
+        var post_a_scroll_h=200000;
+        var p_a_cont_cp=1;
+        var p_a_cont=0;
+        var p4_index=0;
+        var hl_arr=[];
+        var t_hl_arr=[];
+        var t_hl_arr2=[];
+        var ci;
+        var send_id;
+        var cgi=0;
+        var c_arr=[];
+        var s_h=0;
+        var ch_arr=[];
+        var s_i=0;
+        var c2i=0;
+        var c_scroll_h=200000;
+        var c_cont=0;
+        var c_cont_cp=1;
+        var c_scroll_h2=200000;
+        var c_cont2=0;
+        var c_cont_cp2=1;
+        var ci1=0;
+        var ci2=0;
+        var cg_cont_cp=1;
+        var cg_cont=0;
+        var cgb;
+        var kcg=0;
+        var fs_i=0;
+        var fs_id=[];
+        var fs_scroll_h=200000;
+        var fs_cont_cp=1;
+        var fs_cont=0;
+        var fsid;
+        var f_k='';
+        var sc_id=[];
+        var sc_scroll_h=200000;
+        var sc_cont_cp=1;
+        var sc_cont=0;
+        var k_sc=0;
+        var pi1=0;
+        var pi2=0;
+        var mfg=[];
+        var p3_scroll_h=300000;
+        var p3_cont_cp=1;
+        var p3_cont=0;
+        var p3_arr=[];
+        var p3_scroll_h2=300000;
+        var p3_cont_cp2=1;
+        var p3_cont2=0;
+        var p3_arr2=[];
+        var rsh={};
+        var k_t2=0;
+        var post_t_scroll_h2=210000;
+        var post_t2_scroll_h2=200000;
+        var info_t_index2=0;
+        var post_t_cont2 = 0;
+        var post_t_cont_cp2=1;
+        var tpi=1;
+        var aln=0;
+        var ald=0;
+        var vd;
+        var vv=[];
+        var viar=[];
+        var p6_arr=[];
+        var post6_index=0;
+        var glids=500;
+        var pgid=1;
+        var pg2i=0;
+        var pg2a=[];
+        var post2_index2=1;
+        var lv_arr2=[];
+        var p2_cont_cp=1;
+        var p2_cont=1;
+        var kp2i=0;
+        var lupt;
+        $(function(){
+            w_h = window.innerHeight;
+            w_w = window.innerWidth;
+            $('#postarea1').css({'height':(w_h-100)+'px'});
+            $('#footimg1').css({'left':(w_w*0.1-20)+'px'});
+            $('#footimg2').css({'left':(w_w*0.3-23.5)+'px'});
+            $('#footimg3').css({'left':(w_w*0.5-22.5)+'px'});
+            $('#footimg4').css({'left':(w_w*0.7-20)+'px'});
+            $('#footimg5').css({'left':(w_w*0.9-20)+'px'});
+            $('#Pg5_info').addClass('infoarea');
+            $('div').bind('selectstart',function(){return false;});
+            $('span').bind('selectstart',function(){return false;});
+            $("#parent").css({"width":(w_w)+'px'});
+            $("#reply_s_main_h_textarea").css({"width":w_w+10+'px',"max-height":'100px','box-shadow':'0px 0px 0px white'});
+            $('#reply_s_main_h_textarea').focus(function(){
+                $(this).css({'box-shadow':'0px 0px 0px white'});
+                $("#reply_s_space").show();
+            });
+            $("#reply_p_main_c").css({'height':(w_h-110)+'px'});
+            $("#reply_s_main_c").css({'height':(w_h-110)+'px'});
+            $(".postarea").css({'height':(w_h-50)+'px','width':(w_w)+'px'});
+            $("#postarea5").css({'height':(w_h-120)+'px'});
+            $("#Pg5_post_img_c").css({'height':(w_h-60)+'px'});
+            $(".Pg5_post_img_li").css({'height':(w_w)+'px'});
+            $(".Pg5_post_img_div").css({'height':(w_w-22)+'px','width':(w_w-22)+'px'});
+            $(".Pg5_post_img_i").css({'left':(w_w-82)/2+'px','top':(w_w-82)/2+'px'});
+            $('#searcharea').css({'width':w_w+'px','height':w_h+'px'});
+            $('#search_main').css({'height':(w_h-100)+'px'});
+            $('#search_main2').css({'height':(w_h-100)+'px'});
+            $('#search_p').css({'width':(w_w-100)+'px','left':'60px'});
+            $('#chatarea').css({'width':w_w+'px','height':w_h+'px'});
+            $('#chat_main').css({'height':(w_h-100)+'px'});
+            $('#chat_main2').css({'height':(w_h-100)+'px'});
+            $('#chat_p').css({'width':(w_w-100)+'px','left':'60px'});            
+            $("#Pg5_ch_profile_c").css({'width':(w_w-70)+'px','height':(w_h-120)+'px'});
+            $("#Pg5_ch_profile_img_c").css({'width':(w_w-70)+'px','height':(w_w-70)+'px'});
+            $("#Pg5_ch_profile_footer").css({'top':(w_w-20)+'px'});
+            $('#Pg5_post2').css({'height':w_h+'px'});
+            $('#Pg5_info').css({'height':(w_h-170),'width':w_w+'px'});
+            $('#Pg5_setting_main').css({'height':(w_h-120)+'px'});
+            $('#t_postarea').css({'height':(w_h-70)+'px'});
+            $('#t_info').css({'height':(w_h-120)+'px'});
+            $('#t_postarea2').css({'height':(w_h-70)+'px'});
+            $('#t_info2').css({'height':(w_h-120)+'px'});            
+            $('#l_area').css({'height':(w_h-60)+'px'});
+            $('#postarea4').css({'height':(w_h-110)+'px','width':w_w+'px'});
+            $('#Pg4_header').css({'width':w_w+'px'});
+            $('#Pg4_logo').css({'left':(w_w-65)/2+'px'});
+            $('#Pg_start_btn').css({'left':(w_w-100)/2+'px'});
+            $("#c_main_c").css({'height':(w_h-125)+'px'});
+            $("#c_main_h_textarea").css({"width":w_w+10+'px','box-shadow':'0px 0px 0px white'});
+            $('#s_main').css({'width':w_w+'px','height':w_h+'px'});
+            $('#s_area').css({'height':(w_h-100)+'px'});
+            $('#s_p').css({'width':(w_w-100)+'px','left':'60px'});
+            $('#sc_main').css({'width':w_w+'px','height':w_h+'px'});
+            $('#sc_area').css({'height':(w_h-50)+'px'});
+            $('#sc_p').css({'width':(w_w-100)+'px','left':'60px'});
+            $('#Pg_c_sp').css({'width':(w_w-50)+'px'});
+            $('#add_r_c').css({'width':'100%'});
+            $('#postarea6').css({'height':(w_h-100)+'px','width':w_w+'px'});
+            $('#Pg6_header').css({'width':w_w+'px'});
+            $('.postarea2').css({'height':(w_h-100)+'px','width':w_w+'px'});
+            $('#Pg2_header').css({'width':w_w+'px'});
+            $('#Pg2_ds_c').css({'width':(w_w-140)+'px'});
+            $('#Pg2_write').css({'width':w_w+'px'})
+        });
+    </script>
+</head>
+<body>
+    <div id="parent">
+        <div id="middle">
+            <div class="Pg" id="Pg1">
+              <ul id="postarea1" data-role="listview">                 
+                <div id="add_r_c"></div>
+                <div id="postarea1_post">
+                  <div id="postarea1_post_img_c">
+                    <img src="img/unisex.png" id="postarea1_post_img">
+                  </div>
+                  <div id="postarea1_posting">무슨 생각을 하고 계신가요?</div>    
+                </div>                
+              </ul>
+              <div id="p1_h">
+                <span id="p1_logo_s">팔로잉</span>                   
+                <div id="postarea_h_v">방문</div>
+                <img id="postarea1_s" src="img/search.png" alt="">
+                <img id="postarea1_h_img" src="img/letter.png" alt="">
+              </div>                                
+            </div>
+            <div class="Pg" id="PgC">
+              <div id="chatarea" class="postarea">
+                <div id="chat_header">
+                  <div id="chat_space"></div>
+                  <input type="text" id="chat_p" placeholder="팔로잉 검색">
+                  <div id="Pg_c_sp"></div>
+                  <img id="chat_left" src="img/x_btn.png" alt="">
+                  <div id="chat_leftbtn"></div>
+                  <div id="chat_option">
+                    <div id="chat_1" class="chat_option_div">팔로잉</div>
+                    <div id="chat_2" class="chat_option_div">대화방</div>
+                  </div>                   
+                </div>
+                <div id="chat_main">              
+                </div>
+                <div id="chat_main2"></div>
+              </div>
+            </div>            
+            <div class="Pg" id="Pg2">
+                <ul id="postarea2" class="postarea2" data-role="listview">
+                </ul>
+                <ul id="postarea2_2" class="postarea2" data-role="listview">
+                  <div id="Pg2_t_c">
+                    <textarea id="Pg2_write" cols="30" rows="10" placeholder="현재 위치에 플래그를 남겨 보세요." maxlength="280"></textarea>
+                    <div id="Pg2_sp1"></div>
+                    <div id="Pg2_sp2"></div>
+                    <div id="Pg2_sp3"></div>
+                    <div id="Pg2_sp4"></div>
+                    <div id="Pg2_ndd"></div>
+                    <span id="Pg2_n"></span>
+                    <img id="Pg2_nc" src="img/set.png" alt="">
+                    <img src="img/p2a.png" id="Pg2_b_i" alt="">
+                    <img src="img/archieve.png" id="Pg2_a_i" alt="">
+                    <div id="Pg2_t_count"></div>
+                    <span id="Pg2_t_left">280</span>    
+                  </div>
+                  <div id="Pg2_w"></div>
+                </ul>                
+                <div id="Pg2_header">
+                <span id="Pg2_s">추천</span>
+                <span id="Pg2_s2">플래그</span>
+                </div>
+                <div id="Pg2_a">
+                  <ul id="postarea2_3" class="postarea2" data-role="listview">
+                  </ul>
+                  <ul id="postarea2_4" class="postarea2" data-role="listview">
+                  </ul>                  
+                  <div id="Pg2_a_h">
+                    <span id="Pg2_a_o1">관심</span>
+                    <span id="Pg2_a_o2">내 플래그</span>
+                    <img src="img/x_b.png" id="Pg2_x" alt="">  
+                  </div>    
+                </div>
+                <div id="Pg2_b">
+                  <ul id="postarea2_5" class="postarea2" data-role="listview">
+                  </ul>                 
+                  <div id="Pg2_b_h">
+                    <span id="Pg2_b_logo">알림</span>
+                    <img src="img/x_b.png" id="Pg2_b_x" alt="">  
+                  </div>    
+                </div>                                
+            </div>
+            <div class="Pg" id="Pg3">
+              <div id="searcharea" class="postarea">
+                <div id="search_header">
+                  <div id="search_space"></div>
+                  <input type="text" id="search_p" placeholder="사람 찾기">
+                  <img id="search_left" src="img/x_btn.png" alt="">
+                  <div id="search_leftbtn"></div>
+                  <div id="search_option">
+                    <div id="search_all" class="search_option_div">전체</div>
+                    <div id="search_near" class="search_option_div">위치</div>
+                  </div>                   
+                </div>
+                <div id="search_main">              
+                </div>
+                <div id="search_main2"></div>
+              </div>
+            </div>
+            <div class="Pg" id="Pg6">
+                <div id='postarea6'></div>
+                <div id="Pg6_header">
+                <span id="Pg6_s">연락처</span>
+                <img src="img/reload.png" id="Pg6_reload">
+                </div>
+            </div>            
+            <div class="Pg" id="Pg4">
+                <div id='postarea4'></div>
+                <div id="Pg4_header"></div>
+            </div>
+            <div class="Pg" id="Pg5">
+                <div id="Pg5_main">
+                    <div id="postarea5">
+                      <div id="Pg5_info"></div>
+                      <div id="Pg5_profile">
+                        <div class="Pg5_profile_follow" id="Pg5_profile_follow1">게시물</div>
+                        <div id="Pg5_profile_follow2" class="Pg5_profile_follow">팔로잉</div>
+                        <div class="Pg5_profile_follow" id="Pg5_profile_follow3">팔로워</div>
+                        <div class="Pg5_profile_follow" id="Pg5_profile_follow4">히스토리</div>
+                      </div>
+                    </div>
+                    <div id="Pg5_header">                    
+                        <div id="Pg5_profile_img_container">
+                            <img src="img/p_ch_profile.png" id="Pg5_profile_img">                    
+                        </div>
+                        <span id="Pg5_profile_username"></span>                                                
+                        <div id ="pg5_header_top_profile">
+                            <span id="pg5_header_top_profile_id"></span>
+                        </div>
+                        <img src="img/setting.png" id="Pg5_profile_setting" alt="">
+                        <img src="img/write_b.png" id="Pg5_profile_write" alt="">
+                        <div id="Pg5_profile_imgbtn"></div>
+                        <div id="Pg5_profile_setting_btn"></div>
+                        <div id="Pg5_profile_write_btn"></div>                                                  
+                    </div>                                        
+                </div>
+            <div id="Pg5_setting">
+              <img src=img/x2.png id="Pg5_setting_x" alt="">
+              <div id="Pg5_setting_xbtn"></div>
+              <div id="Pg5_setting_main">
+                <div id="Pg5_setting_main_i1" class='Pg5_setting_m'>팔로우 푸시알람 ON</div>
+                <div id="Pg5_setting_main_i2" class='Pg5_setting_m'>댓글 푸시알람 ON</div>
+                <div id="Pg5_setting_main_i3" class='Pg5_setting_m'>답글 푸시알람 ON</div>
+                <div id="Pg5_setting_main_i4" class='Pg5_setting_m'>좋아요 푸시알람 ON</div>
+                <div id="Pg5_setting_main_i11" class='Pg5_setting_m'>플래그 댓글 푸시알람 ON</div>
+                <div id="Pg5_setting_main_i12" class='Pg5_setting_m'>플래그 답글 푸시알람 ON</div>
+              </div>
+            </div>
+        </div>
+        <div id="Pg5_ch_profile">
+          <div id="Pg5_ch_profile_c">
+            <div id="Pg5_ch_profile_header">
+              <img src="img/x2.png" id="Pg5_ch_profile_x" alt="">     
+            </div>
+                
+            <div id="Pg5_ch_profile_img_c">
+              <img src="img/unisex.png" id="Pg5_ch_profile_img" alt="">
+            </div>
+            <div id="Pg5_ch_profile_footer">
+              <div id="Pg5_ch_profile_library">프로필 이미지 변경</div>
+              <div id="Pg5_ch_profile_library_s"></div>
+              <div id="Pg5_ch_profile_finish">완료</div>
+              <div id="Pg5_ch_profile_finish_s"></div>
+            </div>
+          </div>
+        </div>
+        <div id="Pg5_post">
+            <div id="Pg5_post_subject" class="Pg5_post_subject_c">이미지 확인</div>
+            <img src="img/left_arrow.png" id="Pg5_post_leftbtn" class="Pg5_post_leftbtn_c">
+            <div id="Pg5_post_next_btn" class="Pg5_post_next_btn_c">다음</div>
+            <div id="Pg5_post_img_c">
+                <ul id="Pg5_post_img_ul" data-role="listview">
+                    <li id="Pg5_post_img_li1" class="Pg5_post_img_li">
+                        <div id="Pg5_post_img_div1" class="Pg5_post_img_div">
+                            <img src="img/img_plus.png" id="Pg5_post_img_i1" class="Pg5_post_img_i">첫 번째 사진 등록
+                        </div>
+                    </li>
+                    <li id="Pg5_post_img_li2" class="Pg5_post_img_li">
+                        <div id="Pg5_post_img_div2" class="Pg5_post_img_div">
+                            <img src="img/img_plus.png" id="Pg5_post_img_i2" class="Pg5_post_img_i">두 번째 사진 추가
+                        </div>
+                    </li>
+                    <li id="Pg5_post_img_li3" class="Pg5_post_img_li">
+                        <div id="Pg5_post_img_div3" class="Pg5_post_img_div">
+                            <img src="img/img_plus.png" id="Pg5_post_img_i3" class="Pg5_post_img_i">세 번째 사진 추가
+                        </div>
+                    </li>
+                    <li id="Pg5_post_img_li4" class="Pg5_post_img_li">
+                        <div id="Pg5_post_img_div4" class="Pg5_post_img_div">
+                            <img src="img/img_plus.png" id="Pg5_post_img_i4" class="Pg5_post_img_i">네 번째 사진 추가
+                        </div>
+                    </li>                                                            
+                </ul>
+            </div>
+        </div>
+        <div id="Pg5_post2">
+            <textarea name="Pg5_post2_textarea" id="Pg5_post2_textarea" cols="" rows="10" placeholder="오늘의 심경을 적어주세요." maxlength="210"></textarea>   <div id="Pg5_sp1"></div>
+            <div id="Pg5_sp2"></div>
+            <div id="Pg5_sp3"></div>
+            <div id="Pg5_sp4"></div>
+            <div id="Pg5_count"></div>
+            <div id="Pg5_left">210</div>
+            <div id="Pg5_post2_subject" class="Pg5_post_subject_c">글 작성</div>
+            <img src="img/left_arrow.png" id="Pg5_post2_leftbtn" class="Pg5_post_leftbtn_c">
+            <div id="Pg5_post2_next_btn" class="Pg5_post_next_btn_c">완료</div>
+        </div>        
+        <div id="foot">
+            <img src="img/1.png" class="footimg" id="footimg1" >
+            <img src="img/2.png" class="footimg" id="footimg2" >
+            <img src="img/3.png" class="footimg" id="footimg3" >
+            <img src="img/4.png" class="footimg" id="footimg4" >
+            <img src="img/5.png" class="footimg" id="footimg5" >
+            <div class="footdiv" id="footdiv1" ></div>
+            <div class="footdiv" id="footdiv2" ></div>
+            <div class="footdiv" id="footdiv3" ></div>
+            <div class="footdiv" id="footdiv4" ></div>
+            <div class="footdiv" id="footdiv5" ></div>
+        </div>
+        <div id="reply_p">
+            <div id="reply_p_main_c">
+            </div>
+            <div id="reply_p_header">
+            </div>
+            <div id="reply_p_main_h">
+                <textarea id="reply_p_main_h_textarea" cols="30" rows="10" placeholder="댓글을 입력해 주세요."></textarea>
+                <div id="reply_p_main_h_border"></div>
+                <img src="img/send_b.png" id="reply_p_main_h_send" alt="">
+                <div id="reply_p_main_h_sendbtn"></div>
+            </div>
+            <div id="reply_p_info">댓글</div>                        
+        </div>
+        <div id="reply_s">
+            <div id="reply_s_main_c">
+            </div>
+            <div id="reply_s_header">
+            </div>
+            <div id="reply_s_main_h">
+                <textarea id="reply_s_main_h_textarea" cols="30" rows="10" placeholder="답글을 입력해 주세요."></textarea>
+                <div id="reply_s_main_h_border"></div>
+                <img src="img/send_b.png" id="reply_s_main_h_send" alt="">
+                <div id="reply_s_main_h_sendbtn"></div>
+            </div> 
+            <div id="reply_s_info">답글</div>                        
+        </div>                 
+    <div id="t_main">
+        <div id="t_header">                    
+            <div id="t_profile_img_container">
+                <img src="img/p_ch_profile.png" id="t_profile_img">                    
+            </div>
+            <span id="t_profile_username"></span>                                              
+            <span id="t_header_top_profile_id"></span>
+            <div id="t_profile_imgbtn"></div>                                               
+        </div>
+        <div id="t_postarea">
+          <div id="t_info"></div>
+          <div id="t_profile">
+            <div class="t_profile_follow" id="t_profile_follow1">게시물</div>
+            <div id="t_profile_follow2" class="t_profile_follow">팔로잉</div>
+            <div class="t_profile_follow" id="t_profile_follow3">팔로워</div>
+            <div class="t_profile_follow" id="t_profile_follow4">히스토리</div>
+          </div>
+        </div>             
+    </div>
+    <div id="t_main2">
+        <div id="t_header2">                    
+            <div id="t_profile_img_container2">
+                <img src="img/p_ch_profile.png" id="t_profile_img2">                    
+            </div>
+            <span id="t_profile_username2"></span>                                              
+            <span id="t_header_top_profile_id2"></span>
+            <div id="t_profile_imgbtn2"></div>                                               
+        </div>
+        <div id="t_postarea2">
+          <div id="t_info2"></div>
+          <div id="t_profile2">
+            <div class="t_profile_follow2" id="t_profile_follow12">게시물</div>
+            <div id="t_profile_follow22" class="t_profile_follow2">팔로잉</div>
+            <div class="t_profile_follow2" id="t_profile_follow32">팔로워</div>
+            <div class="t_profile_follow2" id="t_profile_follow42">히스토리</div>
+          </div>
+        </div>             
+    </div>    
+    <div id="e_main">     
+      <div id="e_area"></div>
+      <div id="e_header"></div>    
+    </div>
+    <div id="l_main">
+      <div id="l_area"></div>
+      <div id="l_header">
+        <span id="l_header_s">좋아요</span>
+      </div>    
+    </div>
+    <div id="c_main">
+        <div id="c_main_c">
+        </div>
+        <div id="c_main_header">
+        </div>    
+        <div id="c_main_h">
+            <textarea id="c_main_h_textarea" cols="30" rows="10" placeholder="대화내용을 입력해 주세요."></textarea>
+            <div id="c_main_h_border"></div>
+            <img src="img/send_b.png" id="c_main_h_send" alt="">
+            <div id="c_main_h_sendbtn"></div>
+        </div>                      
+    </div>
+    <div id="s_main">
+        <div id="s_header">
+          <div id="s_space"></div>
+          <input type="text" id="s_p" placeholder="검색">
+          <div id="s_option">
+            <div id="s_1" class="chat_option_div">팔로잉</div>
+            <div id="s_2" class="chat_option_div">팔로워</div>
+          </div>                   
+        </div>
+        <div id="s_area">              
+        </div>
+    </div>
+    <div id="sc_main">
+        <div id="sc_header">
+          <div id="sc_space"></div>
+          <input type="text" id="sc_p" placeholder="팔로잉 검색">
+        </div>
+        <div id="sc_area">              
+        </div>
+    </div>
+    <div id="ep2_main">     
+      <div id="ep2_area"></div>
+      <div id="ep2_header"></div>    
+    </div>              
+    </div>
+    <div id="loginPg">
+        <div style="height:20%"></div>
+        <img src="img/logo_green.png" id="logo">
+        <div id="loginPg_login">
+          <div id="pp"></div>
+          
+          <div id="loginPg_loginbtn">
+             내 계정으로 로그인 하기
+          </div>
+
+          <div id="loginPg_signupbtn">새 Yomencity 계정 만들기</div>
+        </div>
+        
+    </div>
+    <div id="loginPg2">
+      <div id="loginPg2_space"></div>
+      <img src="img/logo_green.png" id="loginPg2_logo">
+      <img src="img/left_arrow.png" id="loginPg2_leftbtn">
+      <input type="text" id="loginPg_id" name="loginPg_id" placeholder="아이디" onkeyup="keyup_id()">
+      <script>
+        var keyup_id = function(e){
+          window.localStorage['mh']=$(window).height();              
+        };
+      </script>
+      <input type="password" id="loginPg_password" name="loginPg_password" placeholder="패스워드">
+      <div id="loginPg2_okbtn">확인</div>
+    </div>
+    </div>
+        <script>           
+            var geoindex =0;
+            var geotest = function(){
+                    geoindex++;
+                var onSuccess = function(position) {
+                    updated_lat = position.coords.latitude;
+                    updated_long = position.coords.longitude;
+                        lat = updated_lat;
+                        long = updated_long;
+                        var data = {};
+                        data.lat = lat;
+                        data.long = long;
+                        data._id = window.localStorage['_id'];
+                        data.li=window.localStorage['li'];
+                        $.ajax({
+                            type: 'POST',
+                            data: JSON.stringify(data),
+                            contentType: 'application/json',
+                            url: url+'/sendlocal',
+                            success: function(output){
+                            }
+                        });
+            };
+            function onError(error) {
+                if(error.code =='PositionError.TIMEOUT'){
+                }
+            }
+                navigator.geolocation.getCurrentPosition(onSuccess, onError,{ timeout: 5000});
+            };            
+            var geotest_p = function(){
+                toast_tt2("관심 장소에서 친구들 찾는 중");
+                var onSuccess = function(position) {
+                  lupt=parseInt(Date.now());    
+                  lat = position.coords.latitude;
+                  long = position.coords.longitude;
+                  var data = {};
+                  data._id = window.localStorage['_id'];
+                  data.lat=lat;
+                  data.long=long;
+                  $.ajax({
+                    type: 'POST',
+                    data: JSON.stringify(data),
+                    contentType: 'application/json',
+                    url: url+'/getlp',
+                    success: function(output){
+                      $('.loader2').remove();
+                      $('.toast').remove();
+                      $('.post2').remove();
+                      if(output.status==100){
+                        var t_p2lp=output.ff;
+                        var t_p2lp_l=t_p2lp.length;
+                        p2lp=[];
+                        var dcpl=JSON.parse(window.localStorage['dcpl']);
+                        for(var k=0;k<t_p2lp_l;k++){
+                          function checkf1(em){
+                            return em.id==t_p2lp[k].id;
+                          }
+                          var f_i=mfg.findIndex(checkf1);                            
+                          if(t_p2lp[k].id!=window.localStorage['id']&&f_i==-1){
+                            if(dcpl.indexOf(t_p2lp[k].id)==-1){
+                              p2lp.push(t_p2lp[k]);  
+                            }  
+                          }    
+                        }                                    
+                        p2lp_l=p2lp.length;
+                        p2_l=20;
+                        p2_r=20;  
+                        post2_cont_cp=1;
+                        post2_cont=parseInt(p2lp_l/40);
+                        post2_scroll_h = 400000;  
+                        k2=0;
+                        $('.post2').remove();
+                        if(p2lp_l>40){
+                          add_lp(40,k2);                             
+                        }else if(p2lp_l>0){
+                          add_lp(p2lp_l,k2);                          
+                        }else{
+                          nopost2();  
+                        }                          
+                      }else{
+                        console.log('getlp error');
+                        pi2=0;  
+                      }                        
+                    }
+                  });
+                };
+                function onError(error) {
+                    pi2=0;
+                    if(error.code =='PositionError.TIMEOUT'){
+                    }
+                    alert('code: '    + error.code    + '\n' +
+                          'message: ' + error.message + '\n');
+                }
+                navigator.geolocation.getCurrentPosition(onSuccess, onError,{ timeout: 60000});
+            };            
+var p2fix_p1=function(){
+  $('.loader2').remove();
+  $('.post2').remove();    
+  var div=$('<div></div>');
+  div.addClass('post2');
+  div.css({'position':'relative','width':w_w+'px','height':'285px','background':'white'});
+  div_s=$('<span>설정에서 앱의 위치권한을</br><b>항상</b>으로 설정 후 다시 시도해 주세요.</br>이 문제는 앱을 <b>삭제 후</b> 다시 설치해도</br>쉽게 해결됩니다.</span>');
+  div_s.css({'position':'absolute','width':'100%','height':'125px','line-height':'25px','font-size':'18px','color':'rgb(22,23,27)','text-align':'center','text-shadow':'0px 0px 0px rgba(255,255,255,0)','left':'0','top':'50px','word-break':'break-all'});
+  div_y=$('<div>다시 시도</div>');
+  div_y.css({'position':'absolute','bottom':'10px','left':(w_w/4)+'px','width':w_w/2+'px','height':'50px','background':'rgb(22,23,27)','border-radius':'2px','color':'white','text-shadow':'0px 0px 0px rgba(22,23,27,0)','text-align':'center','line-height':'50px'});
+  div.append(div_s);
+  div.append(div_y);
+  $('#postarea2').append(div);
+  div_y.touchstart(function(){
+    $(this).css({'background':'green'});
+  });
+  div_y.touchend(function(){
+    $(this).css({'background':'rgb(22,23,27)'});
+    div.remove();  
+    checkAvailability_p();  
+  });
+  pi2=0;    
+};
+var p2fix_p2=function(){
+  $('.loader2').remove();
+  $('.post2').remove();    
+  var div=$('<div></div>');
+  div.addClass('post2');
+  div.css({'position':'relative','width':w_w+'px','height':'210px','background':'white'});
+  div_s=$('<span>설정에서 <b>위치 서비스</b>를 키고</br>다시 시도해 주세요.</span>');
+  div_s.css({'position':'absolute','width':'100%','height':'50px','line-height':'25px','font-size':'18px','color':'rgb(22,23,27)','text-align':'center','text-shadow':'0px 0px 0px rgba(255,255,255,0)','left':'0','top':'50px'});
+  div_y=$('<div>다시 시도</div>');
+  div_y.css({'position':'absolute','bottom':'10px','left':(w_w/4)+'px','width':w_w/2+'px','height':'50px','background':'rgb(22,23,27)','border-radius':'2px','color':'white','text-shadow':'0px 0px 0px rgba(22,23,27,0)','text-align':'center','line-height':'50px'});
+  div.append(div_s);
+  div.append(div_y);
+  $('#postarea2').append(div);
+  div_y.touchstart(function(){
+    $(this).css({'background':'green'});
+  });
+  div_y.touchend(function(){
+    $(this).css({'background':'rgb(22,23,27)'});
+    div.remove();  
+    checkAvailability_p();  
+  });
+  pi2=0;    
+};            
+        function checkAvailability_p(){
+            if(pi2==1){
+              return;  
+            }
+            $('.post2').remove();
+            loader2();
+            pi2=1;            
+            cordova.plugins.diagnostic.isLocationAvailable(function(available){
+            if(!available){
+              checkDeviceSetting_p();
+            }else{
+              cordova.plugins.diagnostic.getLocationAuthorizationStatus(function(status){
+                if(status==cordova.plugins.diagnostic.permissionStatus.GRANTED||status==cordova.plugins.diagnostic.permissionStatus.GRANTED_WHEN_IN_USE){
+                  geotest_p();  
+                }else{
+                  p2fix_p1();  
+                }    
+              }, function(error){
+                console.error("The following error occurred: "+error);
+              });
+            }
+            }, function(error){
+            });
+        }
+        function checkDeviceSetting_p(){
+            cordova.plugins.diagnostic.isLocationEnabled(function(enabled){
+                if(!enabled){
+                    p2fix_p2(); //위치서비스 꺼져있음.
+                }else{
+                    p2fix_p1();    //권한 문제
+                }
+            }, function(error){
+            });
+        }
+            var geotest_p2 = function(){
+                toast_tt22(glids+"m 안에 있는 플래그 찾는중");
+                var onSuccess = function(position) {
+                        lat = position.coords.latitude;
+                        long = position.coords.longitude                    
+                        var data = {};
+                        var location ={coords:{latitude:lat,longitude:long}};
+                        data.location=location;
+                        data._id = window.localStorage['_id'];
+                        data.li=window.localStorage['li'];
+                        $.ajax({
+                            type: 'POST',
+                            data: JSON.stringify(data),
+                            contentType: 'application/json',
+                            url: url+'/sendlocal',
+                            success: function(output){
+                                if(output.status ==100||output.status==101){
+                                    if(output.status==101){
+                                      alert('other li detected li:'+window.localStorage['li']);    
+                                    }
+                                    post2_2(0,0);
+                                    pi2=0;
+                                }else{
+                                    $('.toast').remove();
+                                    pi2=0;
+                                }
+                            }
+                        });
+                };
+                function onError(error) {
+                    pi2=0;
+                    if(error.code =='PositionError.TIMEOUT'){
+                    }
+                    alert('code: '    + error.code    + '\n' +
+                          'message: ' + error.message + '\n');
+                }
+                navigator.geolocation.getCurrentPosition(onSuccess, onError,{ timeout: 60000});
+            };
+var p2fix2_p1=function(){
+  $('.loader2_2').remove();
+  $('.add_al').remove();    
+  var div=$('<div></div>');
+  div.addClass('add_al');
+  div.css({'position':'relative','width':w_w+'px','height':'285px','background':'white'});
+  div_s=$('<span>설정에서 앱의 위치권한을</br><b>항상</b>으로 설정 후 다시 시도해 주세요.</br>이 문제는 앱을 <b>삭제 후</b> 다시 설치해도</br>쉽게 해결됩니다.</span>');
+  div_s.css({'position':'absolute','width':'100%','height':'125px','line-height':'25px','font-size':'18px','color':'rgb(22,23,27)','text-align':'center','text-shadow':'0px 0px 0px rgba(255,255,255,0)','left':'0','top':'50px','word-break':'break-all'});
+  div_y=$('<div>다시 시도</div>');
+  div_y.css({'position':'absolute','bottom':'10px','left':(w_w/4)+'px','width':w_w/2+'px','height':'50px','background':'rgb(22,23,27)','border-radius':'2px','color':'white','text-shadow':'0px 0px 0px rgba(22,23,27,0)','text-align':'center','line-height':'50px'});
+  div.append(div_s);
+  div.append(div_y);
+  $('#postarea2_2').append(div);
+  div_y.touchstart(function(){
+    $(this).css({'background':'green'});
+  });
+  div_y.touchend(function(){
+    $(this).css({'background':'rgb(22,23,27)'});
+    div.remove();  
+    checkAvailability_p2();  
+  });
+  pi2=0;    
+};
+var p2fix2_p2=function(){
+  $('.loader2_2').remove();
+  $('.add_al').remove();    
+  var div=$('<div></div>');
+  div.addClass('add_al');
+  div.css({'position':'relative','width':w_w+'px','height':'210px','background':'white'});
+  div_s=$('<span>설정에서 <b>위치 서비스</b>를 키고</br>다시 시도해 주세요.</span>');
+  div_s.css({'position':'absolute','width':'100%','height':'50px','line-height':'25px','font-size':'18px','color':'rgb(22,23,27)','text-align':'center','text-shadow':'0px 0px 0px rgba(255,255,255,0)','left':'0','top':'50px'});
+  div_y=$('<div>다시 시도</div>');
+  div_y.css({'position':'absolute','bottom':'10px','left':(w_w/4)+'px','width':w_w/2+'px','height':'50px','background':'rgb(22,23,27)','border-radius':'2px','color':'white','text-shadow':'0px 0px 0px rgba(22,23,27,0)','text-align':'center','line-height':'50px'});
+  div.append(div_s);
+  div.append(div_y);
+  $('#postarea2_2').append(div);
+  div_y.touchstart(function(){
+    $(this).css({'background':'green'});
+  });
+  div_y.touchend(function(){
+    $(this).css({'background':'rgb(22,23,27)'});
+    div.remove();  
+    checkAvailability_p2();  
+  });
+  pi2=0;    
+};            
+        function checkAvailability_p2(){
+            if(pi2==1){
+              return;  
+            }
+            $('.add_al').remove();
+            loader2_2();
+            $('.p2_btn').remove();
+            pi2=1;            
+            cordova.plugins.diagnostic.isLocationAvailable(function(available){
+            if(!available){
+              checkDeviceSetting_p2();
+            }else{
+              cordova.plugins.diagnostic.getLocationAuthorizationStatus(function(status){
+                if(status==cordova.plugins.diagnostic.permissionStatus.GRANTED||status==cordova.plugins.diagnostic.permissionStatus.GRANTED_WHEN_IN_USE){
+                  geotest_p2();  
+                }else{
+                  p2fix2_p1();  
+                }    
+              }, function(error){
+                console.error("The following error occurred: "+error);
+              });
+            }
+            }, function(error){
+            });
+        }            
+        function checkDeviceSetting_p2(){
+            cordova.plugins.diagnostic.isLocationEnabled(function(enabled){
+                if(!enabled){
+                    p2fix2_p2(); //위치서비스 꺼져있음.
+                }else{
+                    p2fix2_p1();    //권한 문제
+                }
+            }, function(error){
+            });
+        }            
+            var geotest_s = function(v_i){
+                toast_t5('관심 장소에서 사람 찾는중');
+                var onSuccess = function(position) {
+                  lupt=parseInt(Date.now());    
+                  var data={};
+                  data._id=window.localStorage['_id'];
+                  lat=position.coords.latitude;
+                  long=position.coords.latitude;
+                  data.lat=position.coords.latitude;
+                  data.long=position.coords.latitude;
+                  if(v_i ==0){
+                    tmp_sp = $('#search_p').val();    
+                  }    
+                  data.k_word = tmp_sp;
+                  $('#search_p').val('');                    
+                  $.ajax({
+                    type:'POST',
+                    data: JSON.stringify(data),
+                    contentType: 'application/json',
+                    url:url+'/getls',
+                    success:function(output){
+                      $('.add_pl').remove();
+                      post3_s_index =1;                        
+                      if(output.status==100){
+                        p3_arr2=output.p;
+                        p3_cont2=parseInt(p3_arr2.length/30);
+                        p3_cont_cp2=1;
+                        p3_scroll_h2=300000;
+                        pk32=0;
+                        var pl= p3_arr2.length;
+                        if(pl>30){
+                          for(var i=0;i<30;i++){
+                            add_p_l(p3_arr2[i].id,p3_arr2[i].n,p3_arr2[i].i);
+                          }                            
+                        }else if(pl>0){
+                          for(var i=0;i<pl;i++){
+                            add_p_l(p3_arr2[i].id,p3_arr2[i].n,p3_arr2[i].i);  
+                          }                             
+                        }else{
+                          nopost32(tmp_sp);                            
+                        }  
+                        $('.loader_32').remove();   
+                      }else{
+                        $('.loader_32').remove();
+                        toast_t3('서버 오류 발생.');  
+                      }    
+                    }    
+                  });                  
+                };
+                function onError(error) {
+                    alert(error.code);
+                    if(error.code =='PositionError.TIMEOUT'){
+                    }
+                }
+                navigator.geolocation.getCurrentPosition(onSuccess, onError,{ timeout: 60000});
+            };
+var p2fix_s1=function(v_i){
+  $('.loader_32').remove();
+  $('.add_pl').remove();    
+  var div=$('<div></div>');
+  div.addClass('add_pl');
+  div.css({'position':'relative','width':w_w+'px','height':'285px','background':'white'});
+  div_s=$('<span>설정에서 앱의 위치권한을</br><b>항상</b>으로 설정 후 다시 시도해 주세요.</br>이 문제는 앱을 <b>삭제 후</b> 다시 설치해도</br>쉽게 해결됩니다.</span>');
+  div_s.css({'position':'absolute','width':'100%','height':'125px','line-height':'25px','font-size':'18px','color':'rgb(22,23,27)','text-align':'center','text-shadow':'0px 0px 0px rgba(255,255,255,0)','left':'0','top':'50px','word-break':'break-all'});
+  div_y=$('<div>다시 시도</div>');
+  div_y.css({'position':'absolute','bottom':'10px','left':(w_w/4)+'px','width':w_w/2+'px','height':'50px','background':'rgb(22,23,27)','border-radius':'2px','color':'white','text-shadow':'0px 0px 0px rgba(22,23,27,0)','text-align':'center','line-height':'50px'});
+  div.append(div_s);
+  div.append(div_y);
+  $('#search_main2').append(div);
+  div_y.touchstart(function(){
+    $(this).css({'background':'green'});
+  });
+  div_y.touchend(function(){
+    $(this).css({'background':'rgb(22,23,27)'});
+    div.remove();  
+    checkAvailability_s(v_i);  
+  });
+};
+var p2fix_s2=function(v_i){
+  $('.loader_32').remove();
+  $('.add_pl').remove();    
+  var div=$('<div></div>');
+  div.addClass('add_pl');
+  div.css({'position':'relative','width':w_w+'px','height':'210px','background':'white'});
+  div_s=$('<span>설정에서 <b>위치 서비스</b>를 키고</br>다시 시도해 주세요.</span>');
+  div_s.css({'position':'absolute','width':'100%','height':'50px','line-height':'25px','font-size':'18px','color':'rgb(22,23,27)','text-align':'center','text-shadow':'0px 0px 0px rgba(255,255,255,0)','left':'0','top':'50px'});
+  div_y=$('<div>다시 시도</div>');
+  div_y.css({'position':'absolute','bottom':'10px','left':(w_w/4)+'px','width':w_w/2+'px','height':'50px','background':'rgb(22,23,27)','border-radius':'2px','color':'white','text-shadow':'0px 0px 0px rgba(22,23,27,0)','text-align':'center','line-height':'50px'});
+  div.append(div_s);
+  div.append(div_y);
+  $('#search_main2').append(div);
+  div_y.touchstart(function(){
+    $(this).css({'background':'green'});
+  });
+  div_y.touchend(function(){
+    $(this).css({'background':'rgb(22,23,27)'});
+    div.remove();  
+    checkAvailability_s(v_i);  
+  });
+}; 
+        function checkAvailability_s(v_i){
+            $('.add_pl').remove();
+            loader_32();            
+            cordova.plugins.diagnostic.isLocationAvailable(function(available){
+            if(!available){
+              checkDeviceSetting_s(v_i);
+            }else{
+              cordova.plugins.diagnostic.getLocationAuthorizationStatus(function(status){
+                if(status==cordova.plugins.diagnostic.permissionStatus.GRANTED||status==cordova.plugins.diagnostic.permissionStatus.GRANTED_WHEN_IN_USE){
+                  geotest_s(v_i);  
+                }else{
+                  p2fix_s1(v_i);  
+                }    
+              }, function(error){
+                console.error("The following error occurred: "+error);
+              });
+            }
+            }, function(error){
+            });
+        }            
+        function checkDeviceSetting_s(v_i){
+            cordova.plugins.diagnostic.isLocationEnabled(function(enabled){
+                if(!enabled){
+                    p2fix_s2(v_i); //위치서비스 꺼져있음.
+                }else{
+                    p2fix_s1(v_i);    //권한 문제
+                }
+            }, function(error){
+            });
+        }            
+        function checkAvailability(){
+            cordova.plugins.diagnostic.isGpsLocationAvailable(function(available){
+            if(!available){
+                $("#protect2_checkat").hide();
+                $("#protect2").show();
+                checkDeviceSetting();
+            }else{
+                $("#protect2").hide();
+                    geotest();
+            }
+            }, function(error){
+                    $("#protect2").show();
+            });
+        }
+        function checkDeviceSetting(){
+            cordova.plugins.diagnostic.isGpsLocationEnabled(function(enabled){
+                if(!enabled){
+                    cordova.plugins.locationAccuracy.request(function (success){
+                        $("#protect2").hide();
+                        geotest();
+                    }, function onRequestFailure(error){
+                        $("#protect2").show();
+                        $("#protect2_checkat").show();
+                        if(error.code !== cordova.plugins.locationAccuracy.ERROR_USER_DISAGREED){
+                        }
+                    }, cordova.plugins.locationAccuracy.REQUEST_PRIORITY_HIGH_ACCURACY);
+                }
+            }, function(error){
+            });
+        }
+        function checkAvailability2(){
+            cordova.plugins.diagnostic.isGpsLocationAvailable(function(available){
+                $("#protect2_checkat").hide();
+                if(!available){
+                    checkDeviceSetting2();
+                }else{
+                    $("#protect2").hide();
+                    geotest();
+                }
+            }, function(error){
+                    $("#protect2").show();
+            });
+        }
+        function checkDeviceSetting2(){
+            cordova.plugins.diagnostic.isGpsLocationEnabled(function(enabled){
+                if(!enabled){
+                    cordova.plugins.locationAccuracy.request(function (success){
+                        $("#protect2").hide();
+                        geotest();
+                    }, function onRequestFailure(error){
+
+                        $("#protect2_checkat").show();
+                        if(error.code !== cordova.plugins.locationAccuracy.ERROR_USER_DISAGREED){
+                        }
+                    }, cordova.plugins.locationAccuracy.REQUEST_PRIORITY_HIGH_ACCURACY);
+                }
+            }, function(error){
+            });
+        }                         
+        function checkAuthorization1(){
+            cordova.plugins.diagnostic.isLocationAuthorized(function(authorized){
+                if(authorized){
+                    $("#protect").hide();
+                    window.localStorage['check_index1']=1;
+                }else{
+                    cordova.plugins.diagnostic.requestLocationAuthorization(function(status){
+                        switch(status){
+                            case cordova.plugins.diagnostic.permissionStatus.GRANTED:
+                                $("#protect").hide();
+                                window.localStorage['check_index1']=1;
+                                break;
+                            case cordova.plugins.diagnostic.permissionStatus.DENIED:
+                                $("#protect_checkat").show();
+                                break;
+                            case cordova.plugins.diagnostic.permissionStatus.DENIED_ALWAYS:
+                                $("#protect_checkat").html('위치권한을 이미 영구적으로<br>거부하셨습니다.<br>삭제후 다시 설치 부탁드립니다.');
+                                $("#protect_checkat").show();
+                                break;
+                        }
+                    }, function(error){
+                        console.error(error);
+                    });
+                }
+            }, function(error){
+                console.error("The following error occurred: "+error);
+            });
+        }                    
+    </script>
+    <script>
+      $(function(){
+      var pm_func1= function(){
+        $('.pm_func_c').remove();
+        $('.pm_fail').remove();
+        var div_c=$('<div></div>');
+        div_c.css({'position':'absolute','top':'0','left':'0','width':'100%','height':'100%','background':'rgba(100,100,100,0.2)'});
+        div_c.addClass('pm_func_c');
+        var div=$('<div></div>');
+        div.css({'position':'absolute','width':'85%','height':'250px','left':'7.5%','top':(window.innerHeight-250)/2+'px','background':'white','border-radius':'1.5px'});
+        div_i=$('<img>');
+        div_i.attr('src','img/logo_green1.png');
+        div_i.css({'position':'absolute','width':'50px','height':'50px','top':'13px','left':(window.innerWidth*0.85-50)/2+'px','border-radius':'2px'});
+        div_s=$('<span></span>');
+        div_s.html('설정에서 위치 서비스를 키고</br><b>항상 허용</b> 또는 <b>앱을 사용하는 동안</b>을</br>선택해 주세요.');
+        div_s.css({'position':'absolute','width':'100%','text-align':'center','height':'58px','line-height':'29px','font-size':'17px','color':'rgb(22,23,27)','left':'0','top':'105px'});
+        div_y=$('<div>확인</div>');
+        div_y.css({'position':'absolute','bottom':'0','right':'0','width':'90px','height':'50px','color':'white','text-shadow':'0px 0px 0px rgba(255,255,255,0)','text-align':'center','background':'rgb(22,23,27)','line-height':'50px'});
+        div.append(div_i);
+        div.append(div_s);
+        div.append(div_y);  
+        div_c.append(div);
+        $('#parent').append(div_c);
+        div_y.touchstart(function(){
+          $(this).css({'background':'green'});    
+        });
+        div_y.touchend(function(){
+          $(this).css({'background':'rgb(22,23,27)'});
+//          window.localStorage['pm']=11;
+//          pm_fail('위치 서비스를 키지 않았습니다</br>앱을 <b>삭제 후</b> 재 설치 부탁드립니다.');
+          ath_l();
+        });
+      };
+      var pm_func2= function(){
+        $('.pm_func_c').remove();
+        $('.pm_fail').remove();
+        var div_c=$('<div></div>');
+        div_c.css({'position':'absolute','top':'0','left':'0','width':'100%','height':'100%','background':'rgba(100,100,100,0.2)'});
+        div_c.addClass('pm_func_c');          
+        var div=$('<div></div>');
+        div.css({'position':'absolute','width':'85%','height':'250px','left':'7.5%','top':(window.innerHeight-250)/2+'px','background':'white','border-radius':'1.5px'});
+        div_i=$('<img>');
+        div_i.attr('src','img/logo_green1.png');
+        div_i.css({'position':'absolute','width':'50px','height':'50px','top':'13px','left':(window.innerWidth*0.85-50)/2+'px','border-radius':'2px'});
+        div_s=$('<span></span>');
+        div_s.html('앱의 알림 권한에 대해서</br><b>허용</b>을 선택해 주세요');
+        div_s.css({'position':'absolute','width':'100%','text-align':'center','height':'58px','line-height':'29px','font-size':'19px','color':'rgb(22,23,27)','left':'0','top':'105px'});
+        div_y=$('<div>확인</div>');
+        div_y.css({'position':'absolute','bottom':'0','right':'0','width':'90px','height':'50px','color':'white','text-shadow':'0px 0px 0px rgba(255,255,255,0)','text-align':'center','background':'rgb(22,23,27)','line-height':'50px'});
+        div.append(div_i);
+        div.append(div_s);
+        div.append(div_y);  
+        div_c.append(div);
+        $('#parent').append(div_c);
+        div_y.touchstart(function(){
+          $(this).css({'background':'green'});    
+        });
+        div_y.touchend(function(){
+          $(this).css({'background':'rgb(22,23,27)'});
+        //  window.localStorage['pm']=3;
+          ath_n();    
+        });  
+      };
+      var pm_func4= function(){
+        $('.pm_func_c').remove();
+        $('.pm_fail').remove();
+        var div_c=$('<div></div>');
+        div_c.css({'position':'absolute','top':'0','left':'0','width':'100%','height':'100%','background':'rgba(100,100,100,0.2)'});
+        div_c.addClass('pm_func_c');  
+        var div=$('<div></div>');
+        div.addClass('pm_func_c');  
+        div.css({'position':'absolute','width':'85%','height':'250px','left':'7.5%','top':(window.innerHeight-250)/2+'px','background':'white','border-radius':'1.5px'});
+        div_i=$('<img>');
+        div_i.attr('src','img/logo_green1.png');
+        div_i.css({'position':'absolute','width':'50px','height':'50px','top':'13px','left':(window.innerWidth*0.85-50)/2+'px','border-radius':'2px'});
+        div_s=$('<span></span>');
+        div_s.html('연락처 접근에 대해서</br><b>승인</b>을 선택해 주세요.');
+        div_s.css({'position':'absolute','width':'100%','text-align':'center','height':'58px','line-height':'29px','font-size':'19px','color':'rgb(22,23,27)','left':'0','top':'105px'});
+        div_y=$('<div>확인</div>');
+        div_y.css({'position':'absolute','bottom':'0','right':'0','width':'90px','height':'50px','color':'white','text-shadow':'0px 0px 0px rgba(255,255,255,0)','text-align':'center','background':'rgb(22,23,27)','line-height':'50px'});
+        div.append(div_i);
+        div.append(div_s);
+        div.append(div_y);  
+        div_c.append(div);
+        $('#parent').append(div_c);
+        div_y.touchstart(function(){
+          $(this).css({'background':'green'});    
+        });
+        div_y.touchend(function(){
+          $(this).css({'background':'rgb(22,23,27)'});
+          window.localStorage['pm']=8;
+          ath_c();    
+        });  
+      };          
+      var pm_fail= function(txt){
+        $('.pm_func_c').remove();
+        $('.pm_fail').remove();
+        var div_c=$('<div></div>');
+        div_c.css({'position':'absolute','top':'0','left':'0','width':'100%','height':'100%','background':'rgba(100,100,100,0.2)'});
+        div_c.addClass('pm_fail');  
+        var div=$('<div></div>');
+        div.css({'position':'absolute','width':'85%','height':'250px','left':'7.5%','top':(window.innerHeight-250)/2+'px','background':'white','border-radius':'1.5px'});
+        div_i=$('<img>');
+        div_i.attr('src','img/logo_green1.png');
+        div_i.css({'position':'absolute','width':'50px','height':'50px','top':'13px','left':(window.innerWidth*0.85-50)/2+'px','border-radius':'2px'});
+        div_s=$('<span>'+txt+'</span>');
+        div_s.css({'position':'absolute','width':'100%','text-align':'center','height':'54px','line-height':'27px','font-size':'17px','color':'rgb(22,23,27)','left':'0','top':'90px'});
+        div.append(div_i);
+        div.append(div_s);
+        div_c.append(div);
+        $('#parent').append(div_c); 
+      };   
+      var ath_l=function(){       
+        cordova.plugins.diagnostic.requestLocationAuthorization(function(status){
+            if(status==cordova.plugins.diagnostic.permissionStatus.GRANTED||status==cordova.plugins.diagnostic.permissionStatus.GRANTED_WHEN_IN_USE){
+              window.localStorage['pm']=2;
+              pm_func2();
+            }else if(status=='not_determined'){
+              pm_func1();
+            }else{
+              pm_func2();
+              window.localStorage['pm']=2;    
+//                window.localStorage['pm']=1;
+//                pm_fail('위치 사용 허가에 대해서</br>허용하지 않으셨습니다.</br>앱을 <b>삭제 후</b> 재 설치 부탁드립니다.');
+            }
+        }, function(error){
+            alert(error);
+            console.error(error);
+        }, cordova.plugins.diagnostic.locationAuthorizationMode.ALWAYS);          
+      };
+      var ath_n=function(){
+        $('.pm_func_c').remove();
+        $('.pm_fail').remove();          
+        cordova.plugins.diagnostic.requestRemoteNotificationsAuthorization({
+            successCallback: function(){
+              window.localStorage['pm']=7;
+              pm_func4();    
+            },
+            errorCallback: function(err){
+              window.localStorage['pm']=7;
+              pm_func4();                
+//              window.localStorage['pm']=3;
+//              pm_fail('알림 허가에 대해서</br>거부하셨습니다.</br>앱을 <b>삭제 후</b> 재 설치 부탁드립니다.');    
+            },
+            types: [
+                cordova.plugins.diagnostic.remoteNotificationType.ALERT,
+                cordova.plugins.diagnostic.remoteNotificationType.SOUND,
+                cordova.plugins.diagnostic.remoteNotificationType.BADGE
+            ],
+            omitRegistration: false
+        });          
+      };          
+      var ath_c=function(){
+        $('.pm_func_c').remove();
+        $('.pm_fail').remove();
+        cordova.plugins.diagnostic.getContactsAuthorizationStatus(function(status){
+            if(status === cordova.plugins.diagnostic.permissionStatus.GRANTED){
+                console.log("Contacts use is authorized");
+              window.localStorage['pm']=6;
+              $('#protect').hide();                
+            }else{
+                cordova.plugins.diagnostic.requestContactsAuthorization(function(status){
+                    if(status === cordova.plugins.diagnostic.permissionStatus.GRANTED){
+                      window.localStorage['pm']=6;
+                      $('#protect').hide();
+                    }else{
+                      window.localStorage['pm']=6;
+                      $('#protect').hide();                        
+//                      window.localStorage['pm']=8;
+//                      pm_fail_c();
+                    }
+                }, function(error){
+                    console.error(error);
+                });                
+            }
+        }, function(error){
+            console.error("The following error occurred: "+error);
+        });                    
+      };
+      var pm_func11= function(){
+        $('.pm_func_c').remove();
+        $('.pm_fail').remove();
+        var div_c=$('<div></div>');
+        div_c.css({'position':'absolute','top':'0','left':'0','width':'100%','height':'100%','background':'white'});
+        div_c.addClass('pm_func_c');
+        var div=$('<div></div>');
+        div.css({'position':'absolute','width':'85%','height':'250px','left':'7.5%','top':(window.innerHeight-250)/2+'px','background':'white','border-radius':'1.5px'});
+        div_i=$('<img>');
+        div_i.attr('src','img/logo_green1.png');
+        div_i.css({'position':'absolute','width':'80px','height':'80px','top':'13px','left':(window.innerWidth*0.85-80)/2+'px','border-radius':'2px'});
+        div.append(div_i);
+        div_c.append(div);
+        $('#parent').append(div_c);
+        setTimeout(function(){$('.pm_func_c').remove();},2500);
+      };
+      var pm_fail_c= function(){
+        $('.pm_func_c').remove();
+        $('.pm_fail').remove();
+        var div_c=$('<div></div>');
+        div_c.css({'position':'absolute','top':'0','left':'0','width':'100%','height':'100%','background':'rgba(100,100,100,0.2)'});
+        div_c.addClass('pm_fail');  
+        var div=$('<div></div>');
+        div.css({'position':'absolute','width':'85%','height':'320px','left':'7.5%','top':(window.innerHeight-320)/2+'px','background':'white','border-radius':'1.5px'});
+        div_i=$('<img>');
+        div_i.attr('src','img/logo_green1.png');
+        div_i.css({'position':'absolute','width':'50px','height':'50px','top':'13px','left':(window.innerWidth*0.85-50)/2+'px','border-radius':'2px'});
+        div_s=$('<span>앱의 연락처 접근 권한에 대하여</br>허용하지 않으셨습니다.</br>앱을 <b>삭제 후</b> 재 설치하거나</br>설정에서 앱의 연락처 접근에 대하여</br><b>허용</b>해 주시기 바랍니다.</span>');
+        div_s.css({'position':'absolute','width':'100%','text-align':'center','height':'135px','line-height':'27px','font-size':'17px','color':'rgb(22,23,27)','left':'0','top':'90px'});
+        div.append(div_i);
+        div.append(div_s);
+        var check=$('<div>다음</div>');
+        check.css({'position':'absolute','bottom':'10px','right':'10px','color':'white','text-shadow':'0px 0px 0px rgb(255,255,255,0)','font-size':'18px','line-height':'50px','height':'50px','width':'100px','text-align':'center','background':'rgb(22,23,27)','border-radius':'2px'});
+        div.append(check);
+        check.touchstart(function(){
+          check.css({'background':'green'});    
+        });
+        check.touchend(function(){
+          check.css({'background':'rgb(22,23,27)'});
+          cordova.plugins.diagnostic.getContactsAuthorizationStatus(function(status){
+            if(status === cordova.plugins.diagnostic.permissionStatus.GRANTED){
+              window.localStorage['pm']=6;
+              $('#protect').hide();
+              $('.pm_func_c').remove();
+              $('.pm_fail').remove();                
+            }else{
+              toast_dc('설정에서 앱의 연락처 접근에 대하여</br>허용해 주시기 바랍니다.');    
+            }
+          }, function(error){
+            console.error("The following error occurred: "+error);
+          });            
+        });  
+        div_c.append(div);
+        $('#parent').append(div_c); 
+      };          
+      if(window.localStorage['pm']==1){
+        pm_fail('위치 사용 허가에 대해서</br><b>항상 허용</b>을 선택하지 않으셨습니다.</br>앱을 <b>삭제 후</b> 재 설치 부탁드립니다.');  
+      }else if(window.localStorage['pm']==11){
+        pm_fail('위치 서비스를 키지 않았습니다</br>앱을 <b>삭제 후</b> 재 설치 부탁드립니다.');  
+      }else if(window.localStorage['pm']==2){
+        pm_func2();  
+      }else if(window.localStorage['pm']==3){
+        pm_fail('알림 허가에 대해서</br><b>거부</b>하셨습니다.</br>앱을 <b>삭제 후</b> 재 설치 부탁드립니다.');  
+      }else if(window.localStorage['pm']==4){
+     //   pm_func3();  
+      }else if(window.localStorage['pm']==5){
+        pm_fail('동작 및 피트니스 허가에 대해서</br><b>거부</b>하셨습니다.</br>앱을 <b>삭제 후</b> 재 설치 부탁드립니다.');  
+      }else if(window.localStorage['pm']==7){
+        pm_func4();  
+      }else if(window.localStorage['pm']==8){
+          pm_fail_c();
+      }else if(window.localStorage['pm']==6){
+        pm_func11(); //app crash 막기 위함. 
+      }else{
+        pm_func1();
+      }          
+      });   
+    </script>  
+    <script>        
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+  $('#loginPg_signupbtn').click(function(){
+var ref = cordova.InAppBrowser.open('https://www.yomencity.xyz:8443/log', '_system', 'location=no'); 
+var scriptErrorMesssage =
+       "console.log('zz');"      
+ref.addEventListener('loadstop', function() {
+    ref.executeScript({ code: scriptErrorMesssage }, executeScriptCallBack);
+function executeScriptCallBack(params) {
+
+}    
+});
+ref.addEventListener('loaderror', loadErrorCallBack);      
+  });
+function loadErrorCallBack(params) {
+
+    //$('#status-message').text("");
+
+    var scriptErrorMesssage =
+       "alert('Sorry we cannot open that page. Message from the server is : "
+       + params.message + "');"
+
+    ref.executeScript({ code: scriptErrorMesssage }, executeScriptCallBack);
+}    
+}
+        
+    </script>
+<script>
+    $(function(){
+window.addEventListener('keyboardHeightWillChange', function (event) {
+    if(event.keyboardHeight>10){
+       window.localStorage['mh']=event.keyboardHeight;    
+    }    
+});        
+window.addEventListener('keyboardWillShow', function () {
+    // Describe your logic which will be run each time keyboard is shown.
+ if(h_arr.length>0){
+   if(h_arr[0].type==6){
+    var chat_space=$('<div></div>');
+    chat_space.css({'position':'relative','width':w_w+'px','height':(window.localStorage['mh']-60)+'px','background':'white'});
+    chat_space.addClass('chat_space');   
+    $c_main_c.prepend(chat_space);  
+     $c_main_c.scrollTop('1000000');
+   }
+ }        
+});
+window.addEventListener('keyboardWillHide', function () {
+  $('.chat_space').remove();    
+ if(h_arr.length>0){
+   if(h_arr[0].type==6){
+     $c_main_c.scrollTop('1000000');
+   }
+ }  
+});                
+    });
+</script> 
+</body>
+</html>
+

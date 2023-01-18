@@ -1,0 +1,52 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.app.yomencity"
+    },
+    "cordova-plugin-contacts": {
+      "PACKAGE_NAME": "com.app.yomencity"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.app.yomencity"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "com.app.yomencity"
+    },
+    "cordova-plugin-firebase": {
+      "PACKAGE_NAME": "com.app.yomencity"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.app.yomencity"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.app.yomencity"
+    },
+    "cordova-plugin-keyboard": {
+      "PACKAGE_NAME": "com.app.yomencity"
+    },
+    "cordova-plugin-request-location-accuracy": {
+      "PACKAGE_NAME": "com.app.yomencity"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.app.yomencity"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.app.yomencity"
+    },
+    "cordova.plugins.diagnostic": {
+      "PACKAGE_NAME": "com.app.yomencity"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-cocoalumberjack": {
+      "PACKAGE_NAME": "com.app.yomencity"
+    }
+  }
+}
